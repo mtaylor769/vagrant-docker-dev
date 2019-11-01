@@ -34,18 +34,18 @@ services:
   #     dockerfile: ./Dockerfile
   #   ports:
   #     - 3000:3000
-  api:
-    container_name: 'skystrata-api'
-    build:
-      context: ../repos/api/
-      dockerfile: ./Dockerfile
-    ports:
-      - 8000:8000
-    environment:
-      - SSH_AUTH_SOCK=/ssh-agent
-    volumes:
-      - ./:/src
-      - $SSH_AUTH_SOCK:/ssh-agent
+  # api:
+  #   container_name: 'skystrata-api'
+  #   build:
+  #     context: ../repos/api/
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 8000:8000
+  #   environment:
+  #     - SSH_AUTH_SOCK=/ssh-agent
+  #   volumes:
+  #     - ./:/src
+  #     - $SSH_AUTH_SOCK:/ssh-agent
   # prisma:
   #   container_name: wmcp-prisma
   #   image: prismagraphql/prisma:1.34
